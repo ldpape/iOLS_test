@@ -1,6 +1,6 @@
 ** 28/06 : Corrected error on Diagonal Matrix of Weights using "cross".
 
-program define iOLS_OLS, eclass 
+program define selection_on_zeros, eclass 
 	syntax [anything] [if] [in] [aweight pweight fweight iweight] [, DELta(real 1) Robust CLuster(varlist numeric)]
 	marksample touse
 	if  "`robust'" !="" {
