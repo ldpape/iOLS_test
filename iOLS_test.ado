@@ -1,5 +1,5 @@
 program define iOLS_test, eclass 
-	syntax [anything] [if] [in] [aweight pweight fweight iweight] [, DELta(real 1) Reps(real 1)]
+	syntax [anything] [if] [in] [aweight pweight fweight iweight] [, DELta(real 1) REps(real 1)]
 	marksample touse
 	local list_var `anything'
 	* Remarque : la fct gettoken utilise directement des local variables 
@@ -22,13 +22,13 @@ program define iOLS_test, eclass
          *lhs of test
          predict xb_temp, xb
          gen u_hat_temp = `depvar'*exp(-xb_temp)
-         gen lhs_temp = log(delta+u_hat_temp) - log(delta)
+         gen lhs_temp = log(`delta'+u_hat_temp) - log(`delta')
          * rhs of test
-         gen temp = log(`depvar' + delta*exp(xb_temp)) - xb_temp
+         gen temp = log(`depvar' + `delta'*exp(xb_temp)) - xb_temp
          egen c_hat_temp = mean(temp)
          logit dep_pos `depvar'  `indepvar'
          predict p_hat_temp, pr
-         gen rhs_temp = (c_hat_temp-log(delta))/p_hat_temp
+         gen rhs_temp = (c_hat_temp-log(`delta'))/p_hat_temp
          * run the test
          reg lhs_temp rhs_temp if dep_pos, nocons
          matrix b = e(b)
