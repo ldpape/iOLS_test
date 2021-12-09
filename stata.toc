@@ -1,6 +1,6 @@
 v 1
 d Louis Pape
-p iOLS_OLS IOLS_OLS - Run Small Sample iOLS Procedure
+p selection_on_zeros selection_on_zeros - Run Testing Procedure to Select on Zeros
 
 * l word-to-show path-or-url [description]
 * t: Directories within site:
