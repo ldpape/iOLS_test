@@ -1,7 +1,7 @@
 ********************************************** unique.pkg
 v 1
-d selection_on_zeros 
+d iOLS_test 
 d Bootstrap Program to Test for Zero Pattern
 d Distribution-Date: 9 Dec 2021
-f selection_on_zeros.ado
-f selection_on_zeros.sthlp
+f iOLS_test.ado
+f iOLS_test.sthlp
