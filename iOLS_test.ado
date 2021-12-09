@@ -1,5 +1,5 @@
 program define iOLS_test, eclass 
-	syntax [anything] [if] [in] [aweight pweight fweight iweight] [, DELta(real 1) REps(real 1)]
+	syntax [anything] [if] [in] [aweight pweight fweight iweight] [, DELta(real 1) REps(integer)]
 	marksample touse
 	local list_var `anything'
 	* Remarque : la fct gettoken utilise directement des local variables 
