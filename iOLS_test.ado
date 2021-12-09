@@ -38,10 +38,9 @@ program define iOLS_test, eclass
          end 
 		 bootstrap lambda = _b[rhs_temp] , reps(`reps'): BOOTSTRAP_PROCEDURE_IOLS
          test lambda==1
-		 drop dep_pos
+		cap drop dep_pos
 ******************************************************************************
 * Return the information to STATA output
 ******************************************************************************
 
-ereturn display
 end
