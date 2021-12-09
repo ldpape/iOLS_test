@@ -1,9 +1,9 @@
-# Selection On Zeros : Testing Procedure
+# iOLS Testing Procedure
 
 # /!\ Still preliminary : use at your own risk.
 To install this code into Stata, run the following (requires at least Stata 14) : 
 
->cap ado uninstall selection_on_zero
+>cap ado uninstall iOLS_test
 
->net install selection_on_zero , from("https://raw.githubusercontent.com/ldpape/selection_on_zero/master/")
+>net install iOLS_test , from("https://raw.githubusercontent.com/ldpape/iOLS_test/master/")
 
