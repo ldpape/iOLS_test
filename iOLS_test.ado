@@ -36,7 +36,7 @@ program define iOLS_test, eclass
          * drop created variables
          cap drop *temp
          end 
-		 bootstrap lambda = _b[rhs_temp] , reps(`reps'): BOOTSTRAP_PROCEDURE_IOLS
+		 bootstrap lambda = _b[rhs_temp] , reps(10): BOOTSTRAP_PROCEDURE_IOLS
          test lambda==1
 		cap drop dep_pos
 ******************************************************************************
