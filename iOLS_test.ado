@@ -21,7 +21,7 @@ program define iOLS_test, eclass
 		 iOLS_OLS `depvar'  `indepvar' , delta(`delta') robust
          *lhs of test
          predict xb_temp, xb
-         gen u_hat_temp = q1*exp(-xb_temp)
+         gen u_hat_temp = `depvar'*exp(-xb_temp)
          gen lhs_temp = log(delta+u_hat_temp) - log(delta)
          * rhs of test
          gen temp = log(`depvar' + delta*exp(xb_temp)) - xb_temp
